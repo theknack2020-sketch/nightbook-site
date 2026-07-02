@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nightbook support — FAQs, troubleshooting, and how to get help.">
+<title>Support — Nightbook</title>
+<style>
+  :root {
+    --bg: #F5EEDC; --fg: #1E1A4C; --muted: #6B6270; --accent: #E8845C;
+    --card: #FFFFFF; --border: rgba(30, 26, 76, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B0C2E; --fg: #F5EEDC; --muted: #A9A2B0; --accent: #FF9E7A;
+      --card: #1B1E46; --border: rgba(245, 238, 220, 0.15);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--fg); line-height: 1.6;
+    margin: 0; padding: 24px 20px 64px; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 {
+    font-size: 2rem; font-weight: 700; margin: 24px 0 8px;
+    padding-bottom: 12px; border-bottom: 3px solid var(--accent); display: inline-block;
+  }
+  h2 { font-size: 1.25rem; font-weight: 600; margin: 32px 0 8px; }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 20px 0 6px; }
+  p, li { font-size: 1rem; }
+  ul, ol { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { opacity: 0.8; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 16px 20px; border-radius: 12px; margin: 16px 0;
+  }
+  .contact {
+    background: var(--card); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); padding: 16px 20px;
+    border-radius: 12px; margin-top: 32px;
+  }
+  footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p>Here are the answers to the things people ask most. If yours isn't here, email us — we read everything.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="card">
+    <h3>Does Nightbook send my dreams to a server?</h3>
+    <p>No. Every word you write stays on your device. Voice capture is transcribed on-device by Apple's Speech framework. On iOS 26+ with Apple Intelligence, AI reflections run on your device's Neural Engine. Nothing in the app reaches an external server beyond what you explicitly sync to your own iCloud.</p>
+  </div>
+
+  <div class="card">
+    <h3>How does iCloud sync work?</h3>
+    <p>If you enable iCloud Sync in Settings → Me → iCloud Sync, your dreams are stored in your private iCloud container through Apple's CloudKit, encrypted end-to-end by Apple. Only your Apple ID can read it. We (TheKnack) have no access. Turn it off and your data stays on the device where you wrote it.</p>
+  </div>
+
+  <div class="card">
+    <h3>Do I need an account?</h3>
+    <p>No account. No sign-up. Open the app and start writing. iCloud sync uses your existing Apple ID.</p>
+  </div>
+
+  <div class="card">
+    <h3>What does Nightbook Pro unlock?</h3>
+    <p>The Patterns dashboard, on-device AI reflections (iOS 26+ with Apple Intelligence), unlimited symbol dictionary lookups, custom themes, premium widgets, iCloud sync, and unlimited tags. The journal, voice capture, and all 300 symbols are always free.</p>
+  </div>
+
+  <div class="card">
+    <h3>How do I cancel my subscription?</h3>
+    <p>Subscriptions are managed by Apple, not by us. Open iPhone Settings → [your name] → Subscriptions → Nightbook → Cancel Subscription. You keep Pro until the end of the current billing period.</p>
+  </div>
+
+  <div class="card">
+    <h3>Can I get a refund?</h3>
+    <p>Apple handles refunds. Visit <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a> and select the Nightbook purchase. If Apple declines, email us and we'll see what we can do.</p>
+  </div>
+
+  <div class="card">
+    <h3>Can I use Nightbook on my iPad and iPhone?</h3>
+    <p>Yes. Install it on both. Enable iCloud sync (Pro) to keep the two in step. On iPad, Nightbook uses a sidebar layout with your journal at full canvas.</p>
+  </div>
+
+  <div class="card">
+    <h3>Do you support Family Sharing?</h3>
+    <p>Yes. Nightbook Pro (monthly, yearly, and lifetime) is Family Sharing eligible.</p>
+  </div>
+
+  <div class="card">
+    <h3>Is Nightbook a medical app?</h3>
+    <p>No. Nightbook is a reflective journaling and learning tool, not a medical or diagnostic service. Symbol entries draw from folklore and literature — invitations to reflect, not clinical interpretations. If you are experiencing recurring distressing dreams, please speak with a licensed mental health professional.</p>
+  </div>
+
+  <div class="card">
+    <h3>Will Nightbook support other languages?</h3>
+    <p>Version 1.0 ships in English only. We want to get the literary voice right in one language before expanding. Additional languages will come in future updates.</p>
+  </div>
+
+  <div class="card">
+    <h3>Where are my dreams stored on my device?</h3>
+    <p>In Nightbook's local SwiftData store. Voice recordings are kept in the app's Application Support directory. Deleting the app removes all local data. If iCloud sync is on, a copy remains in your private iCloud until you disable sync and remove the container from Settings → [your name] → iCloud.</p>
+  </div>
+
+  <h2>Troubleshooting</h2>
+
+  <div class="card">
+    <h3>Voice capture isn't transcribing</h3>
+    <p>Check Settings → Nightbook and ensure Microphone and Speech Recognition permissions are on. Transcription requires Apple's on-device Speech framework, which needs a language pack for your locale. If the device has never used Siri in your language, go to Settings → Siri & Search and enable it once — the language pack will download.</p>
+  </div>
+
+  <div class="card">
+    <h3>Morning reminder isn't firing</h3>
+    <p>Open Settings → Nightbook → Notifications and make sure they're allowed. Then in Nightbook, go to Me → Morning reminder, toggle it off and back on, and pick a time at least 5 minutes in the future for the next scheduled firing.</p>
+  </div>
+
+  <div class="card">
+    <h3>iCloud sync is stuck</h3>
+    <p>This usually resolves when the device reconnects to Wi-Fi or cellular. Force-quit Nightbook and relaunch. If it still doesn't sync, open Settings → [your name] → iCloud → Manage Account Storage → Nightbook, confirm the container exists, and try again. If the container is missing, sign out and back into iCloud.</p>
+  </div>
+
+  <div class="card">
+    <h3>I can't find an old entry I'm sure I wrote</h3>
+    <p>Use the Search bar on the Journal tab — it searches the title and body of every entry. If the entry was written on a different device and iCloud sync wasn't enabled, the entry lives only on that device.</p>
+  </div>
+
+  <div class="card">
+    <h3>App is slow or won't launch</h3>
+    <p>Try force-quitting and relaunching. If the issue persists, back up any important entries (screenshots work in a pinch) and reinstall the app. Reach out if the problem continues — we'll look at it together.</p>
+  </div>
+
+  <div class="contact">
+    <h3>Still need help?</h3>
+    <p><a href="mailto:nightbook.support@theknack.dev?subject=Nightbook%20support">nightbook.support@theknack.dev</a></p>
+    <p>We aim to reply within 2 business days. Please include your iPhone / iPad model, iOS version, and a description of what you saw.</p>
+  </div>
+
+  <footer>© 2026 TheKnack · <a href="./index.html">Nightbook</a> · <a href="./privacy-policy.html">Privacy</a> · <a href="./terms.html">Terms</a></footer>
+</main>
+</body>
+</html>
